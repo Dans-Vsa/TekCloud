@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Danish - Skills</title>
+    <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="king danish.jpg" alt="Profile Picture">
+                <p class="profile-name">Danish Vesa Bintang Parikesit</p>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link active">Skills</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="contact-info">
+                <p>0813-3952-2194</p>
+                <p>danish23olo@gmail.com</p>
+            </div>
+        </div>
+        <div class="content">
+            <div id="skills" class="content-section active">
+                <h2>Skills</h2>
+                <div class="skill-item">
+                    <h3>HTML & CSS</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar html-css-progress" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar javascript-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar python-progress" data-progress="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>C++</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar cpp-progress" data-progress="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Java</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar java-progress" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var skillBars = document.querySelectorAll('.skill-progress-bar');
+
+            skillBars.forEach(function(bar) {
+                var progress = bar.getAttribute('data-progress');
+                bar.style.width = progress + '%';
+                bar.classList.add('loading');
+            });
+        });
+    </script>
+</body>
+</html>
